@@ -1,11 +1,12 @@
 module Day9
   ( day9partOne
+  , day9partTwo
   )
   where
 
 import Prelude
 
-import Data.Array (all, catMaybes, foldl, last, reverse, uncons, (:))
+import Data.Array (all, catMaybes, foldl, head, last, reverse, uncons, (:))
 import Data.Foldable (sum)
 import Data.Int (fromString)
 import Data.Maybe (Maybe(..))
@@ -34,6 +35,13 @@ nextValue history = do
     currentValues = reverse $ catMaybes $ map (last) extrapolatedHistory
   foldl (\acc value -> acc + value) 0 currentValues
 
+previousValue :: Array Int -> Int
+previousValue history = do
+  let
+    extrapolatedHistory = history : extrapolate history
+    currentValues = reverse $ catMaybes $ map (head) extrapolatedHistory
+  foldl (\acc value -> value - acc) 0 currentValues
+
 parseHistoryEntry :: String -> Array Int
 parseHistoryEntry line = do
   let
@@ -48,3 +56,11 @@ day9partOne = do
     entries = map parseHistoryEntry $ lines input
     nextVals = map nextValue entries
   logShow (sum nextVals)
+
+day9partTwo :: Effect Unit
+day9partTwo = do
+  input <- readFile "src/inputs/day9input.txt"
+  let
+    entries = map parseHistoryEntry $ lines input
+    prevVals = map previousValue entries
+  logShow (sum prevVals)
