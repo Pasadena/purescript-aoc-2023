@@ -3,12 +3,13 @@ module Main where
 import Prelude
 
 import Day1 (day1partOne, day1partTwo)
+import Day11 (day11both)
 import Day2 (partOne, partTwo)
+import Day3 (day3partOne, day3partTwo)
 import Day4 (day4partOne, day4partTwo)
 import Day6 (day6partOne, day6partTwo)
 import Day7 (day7partOne, day7partTwo)
 import Day9 (day9partOne, day9partTwo)
-import Day11 (day11both)
 import Effect (Effect)
 
 
@@ -26,4 +27,6 @@ main = do
   -- day7partTwo
   -- day9partOne
   -- day9partTwo
-  day11both
+  -- day11both
+  day3partOne
+  day3partTwo
