@@ -19,8 +19,8 @@ main = do
   -- day1partOne
   -- day1partTwo
 
-  -- day4partOne
-  -- day4partTwo
+  day4partOne
+  day4partTwo
   -- day6partOne
   -- day6partOne
   -- day6partTwo
@@ -32,4 +32,4 @@ main = do
   -- day3partOne
   -- day3partTwo
   -- day13PartOne
-  day13PartTwo
+  -- day13PartTwo
