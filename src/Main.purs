@@ -5,6 +5,7 @@ import Prelude
 import Day1 (day1partOne, day1partTwo)
 import Day11 (day11both)
 import Day13 (day13PartOne, day13PartTwo)
+import Day14 (day14PartOne)
 import Day16 (day16PartOne, day16PartTwo)
 import Day2 (partOne, partTwo)
 import Day3 (day3partOne, day3partTwo)
@@ -35,4 +36,6 @@ main = do
   -- day13PartOne
   -- day13PartTwo
   -- day16PartOne
-  day16PartTwo
+  -- day16PartTwo
+  day14PartOne
+  -- day14PartTwo
